@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 /*shared style*/
 .display-flex{
     display: flex;
@@ -26,8 +29,15 @@
   font-style: normal;
 }
 
+.btn-primary{
+    background-color: #E95A08;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    width: 270px;
+}
 /*header style start*/
-header{
+header, .plants{
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -64,6 +74,37 @@ header{
 }
 /*header style end*/
 
+/*Main Style Start*/
+.plant-title-sub{
+    text-align: center;
+}
+.plants-title{
+    font-size: 2.5rem;
+}
+.plants-sub{
+    width: 800px;
+    height: 54px;
+    text-align: center;
+    margin: 0 auto;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4, calc((100% - 60px) / 4));
+    gap:20px;
+}
+/* .card{
+    max-width: 270px;
+    max-height: 300px;
+    margin: 10px;
+} */
+
+
+.flower-details{
+    text-align: center;
+}
+.flower-name{
+    font-weight: 500;
+}
 
 /*Responsive Area*/
 /*small device*/
@@ -93,5 +134,9 @@ header{
     }
     .hero-content{
         max-width:61%;
+    }
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
+        gap:20px;
     }
 }
